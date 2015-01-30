@@ -8,23 +8,25 @@ class Currency
 	end
 
 	def self.new_paise(paise)
-		self.new(paise/100)
+		self.new(paise.to_f / 100)
 	end
 
 	def self.new_rupees(rupees)
-		self.new(rupees)
+		self.new(rupees.to_f)
 	end
 
 	def self.new_rupees_paise(rupees, paise)
-		self.new(rupees+paise/100)
+		self.new(rupees.to_f + paise.to_f / 100)
 	end
 
 	def +(currency)
-		@value+currency.value
+		Currency.new(@value + currency.value)
 	end
 
 	def ==(currency)
-		return false if currency.is_a?(Currency)
-		@value==currency.value
+		#return false if currency.is_a?(Currency)
+		other_value = currency.value
+		isEqual = (@value==other_value)
+		return isEqual
 	end
 end

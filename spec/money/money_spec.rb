@@ -5,14 +5,14 @@ describe 'Currency' do
 	let(:rupees) {Currency.new_rupees(1.50)}
 	let(:cash) {Currency.new_rupees_paise(1, 50)}
 	let(:cash_sum) {Currency.new_rupees(3)}
-	
+
 		it 'tests equivalence' do
-			expect(paise). == rupees
-			expect(rupees). == cash
-			expect(cash). == paise
+			expect(paise).to eq(rupees)
+			expect(rupees).to eq(cash)
+			expect(cash).to eq(paise)
 		end
 
 		it 'tests addition of Currency' do
-			expect(paise+rupees). == cash_sum
+			expect(paise+rupees).to eq(cash_sum)
 		end
 end
