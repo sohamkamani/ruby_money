@@ -2,33 +2,35 @@
 
 class Currency
 
-	attr_reader :value
+  attr_reader :paise
 
-	def initialize(value)
-    @value = value
-	end
+  def initialize(rupees,paise)
+    @paise = rupees * 100 + paise 
+  end
 
-	def self.new_paise(paise)
-		self.new(paise.to_f / 100)
-	end
+  def self.new_paise(paise)
+    self.new(0, paise)
+  end
 
-	def self.new_rupees(rupees)
-		self.new(rupees.to_f)
-	end
+  def self.new_rupees(rupees)
+    self.new(rupees, 0)
+  end
 
-	def self.new_rupees_paise(rupees, paise)
-		self.new(rupees.to_f + paise.to_f / 100)
-	end
+  def +(currency)
+    Currency.new(0,@paise + currency.paise)
+  end
 
-	def +(currency)
-		Currency.new(@value + currency.value)
-	end
+  def ==(other)
+    @paise == other.paise
+  end
 
-	def ==(other)
-		@value==other.value
-	end
+  def to_s
+    "#{paise_to_rupees} rupees #{(@paise%100).to_i} paise"
+  end
 
-	def to_s
-		"#{@value.to_i} rupees #{(@value*100%100).to_i} paise"
-	end
+  private
+
+  def paise_to_rupees
+  	@paise/100
+  end
 end
