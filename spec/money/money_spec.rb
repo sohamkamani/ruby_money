@@ -15,4 +15,7 @@ describe 'Currency' do
 		it 'tests addition of Currency' do
 			expect(paise+rupees).to eq(cash_sum)
 		end
+		it 'displays currency as a string' do
+			expect(cash.to_s).to eq("1 rupees 50 paise")
+		end
 end

@@ -1,4 +1,5 @@
 #Currency accepts values in terms of rupees,paise or both and gives the combined values
+
 class Currency
 
 	attr_reader :value
@@ -23,10 +24,11 @@ class Currency
 		Currency.new(@value + currency.value)
 	end
 
-	def ==(currency)
-		#return false if currency.is_a?(Currency)
-		other_value = currency.value
-		isEqual = (@value==other_value)
-		return isEqual
+	def ==(other)
+		@value==other.value
+	end
+
+	def to_s
+		"#{@value.to_i} rupees #{(@value*100%100).to_i} paise"
 	end
 end
