@@ -1,4 +1,4 @@
-#Currency accepts values in terms of rupees,paise or both and gives the combined values
+#Currency accepts values in terms of rupees,paise or both and gives the combined values,adds,subtracts and has ability of sorting
 
 class Currency
 
@@ -30,7 +30,7 @@ class Currency
   end
 
   def to_s
-    "#{paise_to_rupees} rupees #{(@paise % 100).to_i} paise"
+    "#{paise_to_rupees} rupees #{paise_remainder} paise"
   end
 
   private
@@ -38,4 +38,9 @@ class Currency
   def paise_to_rupees
   	@paise / 100
   end
+
+  def paise_remainder
+    @paise % 100
+  end
+
 end
