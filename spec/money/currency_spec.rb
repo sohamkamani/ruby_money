@@ -21,17 +21,17 @@ describe 'Currency' do
   end
 
   describe 'Equality' do
-  	it 'should follow reflexivity' do
-  		expect(money_paise).to eq(money_paise)
-  	end
+    it 'should follow reflexivity' do
+      expect(money_paise).to eq(money_paise)
+    end
 
-  	it 'should follow symmetry' do
-  		expect(money_paise == money_combo1). to eq(money_combo1 == money_paise)
-  	end
+    it 'should follow symmetry' do
+      expect(money_paise == money_combo1). to eq(money_combo1 == money_paise)
+    end
 
-  	it 'should follow transitivity' do
-  		expect((money_paise == money_combo1)&&(money_combo1==money_combo2)).to eq(money_paise == money_combo2)
-  	end
+    it 'should follow transitivity' do
+      expect((money_paise == money_combo1)&&(money_combo1==money_combo2)).to eq(money_paise == money_combo2)
+    end
   end
 
 end

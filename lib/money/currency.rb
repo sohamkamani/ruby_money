@@ -4,7 +4,7 @@ class Currency
 
   attr_reader :paise
 
-  def initialize(rupees,paise)
+  def initialize(rupees, paise)
     @paise = rupees * 100 + paise 
   end
 
@@ -17,7 +17,7 @@ class Currency
   end
 
   def +(currency)
-    Currency.new(0,@paise + currency.paise)
+    Currency.new(0, @paise + currency.paise)
   end
 
   def ==(other)
@@ -31,6 +31,6 @@ class Currency
   private
 
   def paise_to_rupees
-  	@paise/100
+  	@paise / 100
   end
 end
