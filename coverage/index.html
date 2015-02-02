@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-02T11:21:20+05:30">2015-02-02T11:21:20+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-02T11:49:58+05:30">2015-02-02T11:49:58+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.97
+         3.5
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>23</b> relevant lines. 
-    <span class="green"><b>23</b> lines covered</span> and
+    <b>26</b> relevant lines. 
+    <span class="green"><b>26</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#0ba84e2b629b836ff646c915abbb2ff18884b567" class="src_link" title="lib/money/currency.rb">lib/money/currency.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>46</td>
-        <td>22</td>
-        <td>22</td>
+        <td>51</td>
+        <td>25</td>
+        <td>25</td>
         <td>0</td>
-        <td>4.1</td>
+        <td>3.6</td>
       </tr>
       
     </tbody>
@@ -115,8 +115,8 @@
     <h3>lib/money/currency.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>22</b> relevant lines. 
-      <span class="green"><b>22</b> lines covered</span> and
+      <b>25</b> relevant lines. 
+      <span class="green"><b>25</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -127,7 +127,7 @@
         <li class="never" data-hits="" data-linenumber="1">
           
           
-          <code class="ruby">#Currency accepts values in terms of rupees,paise or both and gives the combined values</code>
+          <code class="ruby">#Currency accepts values in terms of rupees,paise or both and gives the combined values,adds,subtracts and has ability of sorting</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -166,8 +166,8 @@
           <code class="ruby">  def initialize(rupees, paise)</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="8">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="30" data-linenumber="8">
+          <span class="hits">30</span>
           
           <code class="ruby">    @paise = rupees * 100 + paise </code>
         </li>
@@ -190,8 +190,8 @@
           <code class="ruby">  def self.new_paise(paise)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="12">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="9" data-linenumber="12">
+          <span class="hits">9</span>
           
           <code class="ruby">    self.new(0, paise)</code>
         </li>
@@ -286,14 +286,14 @@
           <code class="ruby">  def ==(other)</code>
         </li>
       
-        <li class="covered" data-hits="11" data-linenumber="28">
-          <span class="hits">11</span>
+        <li class="covered" data-hits="10" data-linenumber="28">
+          <span class="hits">10</span>
           
           <code class="ruby">    return false unless other.class == Currency</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="29">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="8" data-linenumber="29">
+          <span class="hits">8</span>
           
           <code class="ruby">    @paise == other.paise</code>
         </li>
@@ -313,88 +313,118 @@
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">  def to_s</code>
+          <code class="ruby">  def sort_along_with(*other_moneys)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">    &quot;#{paise_to_rupees} rupees #{paise_remainder} paise&quot;</code>
+          <code class="ruby">    other_moneys.push(self)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
+        <li class="covered" data-hits="3" data-linenumber="34">
+          <span class="hits">3</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    other_moneys.sort{|money_1, money_2| money_1.paise &lt;=&gt; money_2.paise}</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
-          <code class="ruby">  private</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">  def to_s</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="38">
           <span class="hits">1</span>
           
-          <code class="ruby">  def paise_to_rupees</code>
+          <code class="ruby">    &quot;#{paise_to_rupees} rupees #{paise_remainder} paise&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="39">
           
-          <code class="ruby">  	@paise / 100</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="42">
+        <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">  def paise_remainder</code>
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">    @paise % 100</code>
+          <code class="ruby">  def paise_to_rupees</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">  	@paise / 100</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="47">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def paise_remainder</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @paise % 100</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">end</code>

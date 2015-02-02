@@ -11,13 +11,12 @@ describe 'Currency' do
 
   it 'equivalence to see if the conversion is accurate' do
     expect(money_rupees).to eq(money_sum)
-    expect(money_combo1).to eq(money_paise)
   end
 
   it 'sorts the array of money objects' do
-  expect([money_paise, money_0, money_rupees].sort{|money1, money2| money1.paise <=> money2.paise}).to eq([money_0, money_paise, money_rupees])
+    expect(money_0.sort_along_with(money_rupees, money_paise)).to eq([money_0, money_paise, money_rupees])
   end
-  
+
 describe 'addition' do
   it 'addition' do
     expect(money_paise + money_combo1).to eq(money_sum)

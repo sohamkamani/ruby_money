@@ -29,6 +29,11 @@ class Currency
     @paise == other.paise
   end
 
+  def sort_along_with(*other_moneys)
+    other_moneys.push(self)
+    other_moneys.sort{|money_1, money_2| money_1.paise <=> money_2.paise}
+  end
+
   def to_s
     "#{paise_to_rupees} rupees #{paise_remainder} paise"
   end
