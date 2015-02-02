@@ -14,7 +14,7 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-02T11:49:58+05:30">2015-02-02T11:49:58+05:30</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-02T12:16:29+05:30">2015-02-02T12:16:29+05:30</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         3.5
+         3.68
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>2</b> files in total.
-    <b>26</b> relevant lines. 
-    <span class="green"><b>26</b> lines covered</span> and
+    <b>24</b> relevant lines. 
+    <span class="green"><b>24</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -64,10 +64,10 @@
         <td class="strong"><a href="#0ba84e2b629b836ff646c915abbb2ff18884b567" class="src_link" title="lib/money/currency.rb">lib/money/currency.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>51</td>
-        <td>25</td>
-        <td>25</td>
+        <td>23</td>
+        <td>23</td>
         <td>0</td>
-        <td>3.6</td>
+        <td>3.8</td>
       </tr>
       
     </tbody>
@@ -115,8 +115,8 @@
     <h3>lib/money/currency.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>25</b> relevant lines. 
-      <span class="green"><b>25</b> lines covered</span> and
+      <b>23</b> relevant lines. 
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -154,148 +154,148 @@
           <code class="ruby">  attr_reader :paise</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include Comparable</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="8">
           
-          <code class="ruby">  def initialize(rupees, paise)</code>
-        </li>
-      
-        <li class="covered" data-hits="30" data-linenumber="8">
-          <span class="hits">30</span>
           
-          <code class="ruby">    @paise = rupees * 100 + paise </code>
+          <code class="ruby">  # def &lt;=&gt;(other)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">  #   @paise &lt;=&gt; other.paise</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.new_paise(paise)</code>
+          <code class="ruby">  def initialize(rupees, paise)</code>
         </li>
       
-        <li class="covered" data-hits="9" data-linenumber="12">
-          <span class="hits">9</span>
+        <li class="covered" data-hits="30" data-linenumber="13">
+          <span class="hits">30</span>
           
-          <code class="ruby">    self.new(0, paise)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @paise = rupees * 100 + paise </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.new_rupees(rupees)</code>
+          <code class="ruby">  def self.new_paise(paise)</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="16">
-          <span class="hits">5</span>
+        <li class="covered" data-hits="9" data-linenumber="17">
+          <span class="hits">9</span>
           
-          <code class="ruby">    self.new(rupees, 0)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="17">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    self.new(0, paise)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">  def +(currency)</code>
+          <code class="ruby">  def self.new_rupees(rupees)</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="20">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="5" data-linenumber="21">
+          <span class="hits">5</span>
           
-          <code class="ruby">    Currency.new(0, @paise + currency.paise)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    self.new(rupees, 0)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="23">
           
-          <code class="ruby">  def -(currency)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">    Currency.new(0, @paise - currency.paise)</code>
+          <code class="ruby">  def +(currency)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="covered" data-hits="7" data-linenumber="25">
+          <span class="hits">7</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    Currency.new(0, @paise + currency.paise)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
-          <code class="ruby">  def ==(other)</code>
+          <code class="ruby">  def -(currency)</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="28">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
           
-          <code class="ruby">    return false unless other.class == Currency</code>
-        </li>
-      
-        <li class="covered" data-hits="8" data-linenumber="29">
-          <span class="hits">8</span>
-          
-          <code class="ruby">    @paise == other.paise</code>
+          <code class="ruby">    Currency.new(0, @paise - currency.paise)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
@@ -313,19 +313,19 @@
         <li class="covered" data-hits="1" data-linenumber="32">
           <span class="hits">1</span>
           
-          <code class="ruby">  def sort_along_with(*other_moneys)</code>
+          <code class="ruby">  def ==(other)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="11" data-linenumber="33">
+          <span class="hits">11</span>
           
-          <code class="ruby">    other_moneys.push(self)</code>
+          <code class="ruby">    return false unless other.class == Currency</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="34">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="9" data-linenumber="34">
+          <span class="hits">9</span>
           
-          <code class="ruby">    other_moneys.sort{|money_1, money_2| money_1.paise &lt;=&gt; money_2.paise}</code>
+          <code class="ruby">    @paise == other.paise</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">

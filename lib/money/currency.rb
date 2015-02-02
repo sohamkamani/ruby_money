@@ -3,6 +3,11 @@
 class Currency
 
   attr_reader :paise
+  include Comparable
+
+  def <=>(other)
+    @paise <=> other.paise
+  end
 
   def initialize(rupees, paise)
     @paise = rupees * 100 + paise 
@@ -27,11 +32,6 @@ class Currency
   def ==(other)
     return false unless other.class == Currency
     @paise == other.paise
-  end
-
-  def sort_along_with(*other_moneys)
-    other_moneys.push(self)
-    other_moneys.sort{|money_1, money_2| money_1.paise <=> money_2.paise}
   end
 
   def to_s

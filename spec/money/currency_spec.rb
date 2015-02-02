@@ -14,7 +14,7 @@ describe 'Currency' do
   end
 
   it 'sorts the array of money objects' do
-    expect(money_0.sort_along_with(money_rupees, money_paise)).to eq([money_0, money_paise, money_rupees])
+    expect([money_paise, money_0, money_rupees].sort).to eq([money_0, money_paise, money_rupees])
   end
 
 describe 'addition' do
