@@ -20,12 +20,17 @@ class Currency
     Currency.new(0, @paise + currency.paise)
   end
 
+  def -(currency)
+    Currency.new(0, @paise - currency.paise)
+  end
+
   def ==(other)
+    return false unless other.class == Currency
     @paise == other.paise
   end
 
   def to_s
-    "#{paise_to_rupees} rupees #{(@paise%100).to_i} paise"
+    "#{paise_to_rupees} rupees #{(@paise % 100).to_i} paise"
   end
 
   private
